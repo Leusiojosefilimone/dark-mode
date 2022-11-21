@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Sriracha&display=swap');
+
+*{
+     margin: 0px;
+     padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+    transition: 0.3s;
+}
+.card{
+    background: white;
+    border-radius: 20px;
+    margin: 20px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: 0.3s;
+}
+.card::before{
+    content: "";
+    position: absolute;
+    height: 40%;
+    width: 100%;
+    background-color: #008fdc;
+    border-radius: 20px 20px 0 0;
+    transition: 0.3s;
+}
+.card .image{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    padding: 3px;
+    background-color: #008fdc;
+    border: 2px solid white;
+    transition: 0.3s;
+}
+
+.card .image img{
+    width: 100%;
+    height: 100%;
+   /* object-fit: cover; 
+    border-radius: 50%;
+    border: 3px  solid white;*/
+}
+.card .card-content{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    flex-direction: column;
+}
+.card .btn-dark{
+    text-align: right;
+    width: 100%;
+}
+.card .btn-dark input[type=checkbox]{
+    display: none;
+}
+.card .name-profession{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    color: #525252;
+    transition: 0.3s;
+}
+.card .name-profession .name{
+    font-size: 20px;
+    font-weight: 500;
+
+}
+.card .name-profession .profession{
+    font-size: 15px;
+    margin-top: 3px;
+    font-weight: 500;
+}
+.card .estrelas{
+    display: flex;
+    align-items: center;
+    color: #008fdc;
+    font-size: 18px;
+    margin: 5px 0px;
+    transition: 0.3s;
+}
+.card .button{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    
+}
+.card .button button{
+    background: #008fdc;
+    margin-right: 20px;
+    border: none;
+    color: white;
+    padding: 8px 22px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3;
+}
+.card .btn-dark i{
+    cursor: pointer;
+    color:white;
+}
+.card .sol{
+    display: none;
+}
+/*theme dark*/
+body.dark{
+    background: #121521;
+}
+body.dark .card{
+    background-color: #1F2437;
+}
+body.dark .card::before,
+body.dark .image,
+body.dark .card .button button{
+    background: #064d80;
+}
+body.dark .name-profession{
+    color: white;
+}
+body.dark .card .estrelas i{
+    color: #064d80;
+}
+body.dark .card .card-content .lua{
+    display: none;
+}
+body.dark .card .card-content .sol{
+     display: inline-block;
+}
+
+
+
